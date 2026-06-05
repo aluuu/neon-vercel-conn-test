@@ -4,9 +4,9 @@ Minimal Next.js app for testing the **Neon Vercel Connect Account / Marketplace
 integration** end-to-end. It runs a `SELECT NOW()` query against whatever
 `DATABASE_URL` Vercel injects into the deployment and reports the result.
 
-Used to verify LKB-12649 work — that credential env vars Neon writes into
-Vercel (DATABASE_URL etc.) work at runtime, and that the Vercel "Production
-only" toggle correctly blocks preview deployments from reading them when set.
+Used to verify that credential env vars Neon writes into Vercel
+(DATABASE_URL etc.) work at runtime, and that the Vercel "Production only"
+toggle correctly blocks preview deployments from reading them when set.
 
 ## Routes
 
@@ -41,7 +41,7 @@ Then `curl http://localhost:3000/api/db`.
 4. Deploy. Hit the deployment URL — the homepage should show a successful DB
    probe result.
 
-## Testing the Production-only toggle (LKB-12649)
+## Testing the Production-only toggle
 
 Once deployed:
 
